@@ -1,0 +1,19 @@
+version: "2"
+services:
+
+  selenium:
+    build: ./selenium
+    ports:
+      - 4444:4444
+    tty: true
+    networks:
+      default:
+        aliases:
+          - local.selenium
+    volumes:
+      - /dev/shm:/dev/shm
+  app:
+    build: ./python
+    volumes:
+      - ./python:/home/workspace
+    tty: true
