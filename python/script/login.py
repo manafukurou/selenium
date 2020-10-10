@@ -1,9 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import os
 import configparser
 
+#config読み込み
+configPath = os.path.dirname(os.path.abspath(__file__))
+configPath = os.path.join(configPath, 'config.ini')
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read(configPath)
 
 endpoint = config.get('general', 'endpoint')
 email = config.get('general', 'email')
