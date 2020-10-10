@@ -32,19 +32,21 @@ driver.set_window_size(width, height)
 driver.get(endpoint)
 print(driver.current_url)
 
-#サインアップボタンクリック
+#ログインボタンクリック
 element = driver.find_element_by_link_text('ログイン')
 element.click()
 
+#email / passwordのセット
 semail = driver.find_element_by_id("email")
 semail.send_keys(email)
 spassword = driver.find_element_by_id("password")
 spassword.send_keys(password)
 
+#ログインボタンを押下
 driver.find_element_by_id("login-button").click()
 print(driver.current_url)
 
-# #3. 画面の幅をコンテンツの幅と合わせてスクリーンショットをとる
+# スクリーンショットをとる
 driver.save_screenshot('screenshot.png')
 
 
