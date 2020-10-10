@@ -1,2 +1,8 @@
-# selenium
-seleniumの環境構築とsampleコード
+# selenium構築
+```
+docker-compose up -d
+```
+
+```
+docker exec -it selenium_app_1 /bin/bash 
+```

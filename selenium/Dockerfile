@@ -1,1 +1,2 @@
-FROM selenium/standalone-chrome:3.141.59-xenon
+FROM selenium/standalone-chrome:4.0.0-alpha-7-prerelease-20200921
+
